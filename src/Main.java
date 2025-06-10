@@ -4,9 +4,15 @@ class Person {
     String MBTI;
 
     public void sayHello() {
-        System.out.println("안녕하세요? 저는 " + name + "입니다. 저의 나이는 " + age + "세입니다. " + "그리고 저의 MBTI는 " +  MBTI + "입니다.");
+        System.out.println("안녕하세요? 저는 " + name + "입니다." +
+                "저의 나이는 " + age + "세입니다. " + "그리고 저의 MBTI는 " + MBTI + "입니다.");
+    }
+
+    public void work() {
+        System.out.println("일하는 중...");
     }
 }
+
 public class Main {
     public static void main(String[] args) {
         Person person = new Person(); // Is called 객체, 인스턴스
@@ -16,5 +22,12 @@ public class Main {
         person.MBTI = "ISTP";
 
         person.sayHello();
+        person.work();
+
+        Person mzPerson = new Person();
+
+        person.name = "고종우";
+        person.age = 18;
+        person.MBTI = "ESFP";
     }
 }
